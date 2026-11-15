@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For Essie — My Girlfriend | Ethan Price (AresX)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        royalBg: '#080515',
+                        royalPurple: '#6A0DAD',
+                        royalSapphire: '#075BCE',
+                        royalPink: '#FF36A6',
+                        royalGold: '#FFD166',
+                        royalWhite: '#FFF5FF',
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'serif'],
+                        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-void: #080515;
+            --royal-purple: #6A0DAD;
+            --royal-sapphire: #075BCE;
+            --royal-pink: #FF36A6;
+            --royal-gold: #FFD166;
+            --royal-white: #FFF5FF;
+        }
+
+        /* Base & Typography */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-void);
+            color: var(--royal-white);
+            overflow-x: hidden;
+            margin: 0;
+            min-height: 100dvh;
+        }
+
+        .font-editorial {
+            font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+        }
+
+        /* Fixed Full-Viewport Background Photo of Essie */
+        .essie-bg-layer {
+            position: fixed;
+            inset: -2%;
+            background-image: url('WhatsApp Image 2026-11-15 at 1.46.21 PM (2).jpeg');
+            background-size: cover;
+            background-position: center 20%;
+            background-repeat: no-repeat;
+            filter: brightness(0.42) contrast(1.08) saturate(1.12);
+            z-index: -4;
+            transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), background-image 0.8s ease-in-out;
+            will-change: transform;
+        }
+
+        /* Royal Fantasy Romance Multi-Spectrum Overlay */
+        .royal-fantasy-overlay {
+            position: fixed;
+            inset: 0;
+            background:
+                radial-gradient(circle at 18% 15%, rgba(106, 13, 173, 0.42) 0%, transparent 50%),
+                radial-gradient(circle at 85% 22%, rgba(7, 91, 206, 0.36) 0%, transparent 52%),
+                radial-gradient(circle at 50% 85%, rgba(255, 54, 166, 0.25) 0%, transparent 55%),
+                radial-gradient(circle at 50% 45%, rgba(8, 5, 21, 0.38) 0%, rgba(8, 5, 21, 0.88) 100%);
+            z-index: -3;
+            pointer-events: none;
+        }
+
+        /* Subtle Floating Fantasy Sparkles */
+        .fantasy-stars {
+            position: fixed;
+            inset: 0;
+            background-image:
+                radial-gradient(1.5px 1.5px at 15% 25%, rgba(255, 209, 102, 0.7), transparent),
+                radial-gradient(1.5px 1.5px at 78% 18%, rgba(255, 54, 166, 0.7), transparent),
+                radial-gradient(2px 2px at 42% 65%, rgba(7, 91, 206, 0.75), transparent),
+                radial-gradient(1.5px 1.5px at 88% 72%, rgba(255, 245, 255, 0.65), transparent),
+                radial-gradient(1.5px 1.5px at 26% 82%, rgba(255, 209, 102, 0.65), transparent);
+            z-index: -2;
+            pointer-events: none;
+            animation: twinkleStars 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes twinkleStars {
+            0% { opacity: 0.45; }
+            100% { opacity: 0.95; }
+        }
+
+        /* Royal Glassmorphism Card */
+        .royal-glass {
+            background: linear-gradient(
+                135deg,
+                rgba(106, 13, 173, 0.22) 0%,
+                rgba(8, 5, 21, 0.76) 48%,
+                rgba(7, 91, 206, 0.20) 100%
+            );
+            backdrop-filter: blur(20px) saturate(140%);
+            -webkit-backdrop-filter: blur(20px) saturate(140%);
+            border: 1px solid rgba(255, 209, 102, 0.26);
+            box-shadow:
+                0 22px 55px -12px rgba(8, 5, 21, 0.85),
+                inset 0 1px 1px rgba(255, 245, 255, 0.28),
+                inset 0 -1px 1px rgba(255, 54, 166, 0.24),
+                0 0 24px rgba(106, 13, 173, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Specular Royal Sheen Sweep */
+        .royal-glass::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -140%;
+            width: 85%;
+            height: 100%;
+            background: linear-gradient(
+                105deg,
+                transparent 20%,
+                rgba(255, 54, 166, 0.08) 45%,
+                rgba(255, 209, 102, 0.12) 52%,
+                transparent 80%
+            );
+            transform: skewX(-22deg);
+            animation: royalSheen 10s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @keyframes royalSheen {
+            0% { left: -140%; }
+            26% { left: 165%; }
+            100% { left: 165%; }
+        }
+
+        /* Royal Jeweled Photo Frame */
+        .royal-photo-frame {
+            position: relative;
+            padding: 7px;
+            background: linear-gradient(135deg, #FFD166, #FF36A6, #6A0DAD, #075BCE, #FFD166);
+            box-shadow:
+                0 20px 50px rgba(8, 5, 21, 0.88),
+                0 0 26px rgba(255, 54, 166, 0.25);
+            transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.45s ease;
+        }
+        .royal-photo-frame:hover {
+            transform: translateY(-4px) scale(1.015);
+            box-shadow:
+                0 26px 60px rgba(8, 5, 21, 0.9),
+                0 0 34px rgba(255, 209, 102, 0.38);
+        }
+
+        /* Subdued Frame for Ethan's Cameo Photos (Balanced so Essie shines brightest) */
+        .subtle-cameo-frame {
+            position: relative;
+            padding: 4px;
+            background: linear-gradient(135deg, rgba(106, 13, 173, 0.65), rgba(7, 91, 206, 0.65), rgba(255, 209, 102, 0.45));
+            box-shadow: 0 12px 30px rgba(8, 5, 21, 0.75);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .subtle-cameo-frame:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 16px 36px rgba(106, 13, 173, 0.45);
+        }
+
+        /* Gold & Rose Text Glow */
+        .text-royal-glow {
+            text-shadow: 0 2px 22px rgba(255, 209, 102, 0.42), 0 0 36px rgba(255, 54, 166, 0.28);
+        }
+
+        /* Multi-Page View Transitions */
+        .page-view {
+            display: none;
+            animation: pageFadeSlide 0.55s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .page-view.active-page {
+            display: block;
+        }
+
+        @keyframes pageFadeSlide {
+            from {
+                opacity: 0;
+                transform: translateY(14px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navigation Tab Active State */
+        .nav-tab {
+            transition: all 0.25s ease;
+            border: 1px solid transparent;
+        }
+        .nav-tab.active-tab {
+            background: linear-gradient(135deg, rgba(106, 13, 173, 0.55), rgba(255, 54, 166, 0.32));
+            border-color: rgba(255, 209, 102, 0.55);
+            color: #FFD166;
+            box-shadow: 0 0 18px rgba(255, 54, 166, 0.28);
+        }
+
+        /* Keypad Button Press & Hover */
+        .keypad-btn {
+            background: linear-gradient(145deg, rgba(106, 13, 173, 0.28), rgba(7, 91, 206, 0.18));
+            border: 1px solid rgba(255, 209, 102, 0.25);
+            box-shadow: inset 0 1px 0 rgba(255, 245, 255, 0.2);
+            transition: all 0.18s ease;
+        }
+        .keypad-btn:hover, .keypad-btn:active {
+            background: linear-gradient(145deg, rgba(255, 54, 166, 0.35), rgba(106, 13, 173, 0.45));
+            border-color: #FFD166;
+            transform: scale(0.96);
+        }
+
+        /* Shake Animation for Incorrect PIN */
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-8px); }
+            40%, 80% { transform: translateX(8px); }
+        }
+        .animate-shake {
+            animation: shake 0.4s ease-in-out;
+        }
+
+        /* Audio Equalizer Bars */
+        .eq-bar {
+            width: 3px;
+            border-radius: 9999px;
+            background: linear-gradient(to top, #FF36A6, #FFD166);
+            transition: height 0.2s ease;
+        }
+        .eq-playing .eq-bar:nth-child(1) { animation: eqBounce 0.7s ease-in-out infinite alternate; }
+        .eq-playing .eq-bar:nth-child(2) { animation: eqBounce 0.5s ease-in-out 0.15s infinite alternate; }
+        .eq-playing .eq-bar:nth-child(3) { animation: eqBounce 0.8s ease-in-out 0.3s infinite alternate; }
+        .eq-playing .eq-bar:nth-child(4) { animation: eqBounce 0.6s ease-in-out 0.1s infinite alternate; }
+
+        @keyframes eqBounce {
+            0% { height: 4px; }
+            100% { height: 18px; }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080515;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #6A0DAD, #FF36A6);
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-royalPink/35 selection:text-royalWhite">
+
+    <!-- Fixed Full-Viewport Background Image of Essie & Royal Fantasy Romance Overlay -->
+    <div id="essieBg" class="essie-bg-layer" aria-hidden="true"></div>
+    <div class="royal-fantasy-overlay" aria-hidden="true"></div>
+    <div class="fantasy-stars" aria-hidden="true"></div>
+
+    <!-- =========================================================
+         1. PASSCODE GATE OVERLAY ('2026') — Mobile & WhatsApp Optimized
+    ========================================================== -->
+    <div id="passcodeGate" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-royalBg/80 backdrop-blur-xl transition-all duration-700 overflow-y-auto">
+        <div id="gateCard" class="royal-glass w-full max-w-md rounded-3xl p-6 sm:p-9 text-center relative z-10 my-auto">
+            <!-- Top Crown Emblem -->
+            <div class="w-16 h-16 mx-auto mb-3.5 rounded-2xl bg-gradient-to-br from-royalPurple/50 via-royalPink/30 to-royalSapphire/50 border border-royalGold/50 flex items-center justify-center shadow-lg">
+                <i id="lockIcon" class="fa-solid fa-crown text-royalGold text-2xl transition-transform duration-300"></i>
+            </div>
+
+            <p class="text-[11px] uppercase tracking-[0.28em] text-royalGold font-semibold">Our Royal Beginning</p>
+            <h1 class="font-editorial text-4xl sm:text-5xl font-bold text-royalWhite mt-1 text-royal-glow">For Essie</h1>
+            <p class="text-xs sm:text-sm text-royalWhite/85 mt-1.5 font-light">Officially My Girlfriend • From Ethan Price (AresX)</p>
+
+            <!-- Hint Pill -->
+            <div class="mt-4 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-royalPurple/30 border border-royalPink/40 text-xs text-royalWhite">
+                <i class="fa-solid fa-key text-royalGold text-[11px]"></i>
+                <span>Tap Passcode <strong class="text-royalGold font-mono tracking-wider">2026</strong> to Enter & Play Music</span>
+            </div>
+
+            <!-- 4 PIN Indicator Dots -->
+            <div class="flex justify-center items-center gap-4 my-5" id="pinDotsContainer">
+                <span id="dot-0" class="w-3.5 h-3.5 rounded-full border border-royalWhite/45 bg-royalWhite/5 transition-all duration-200"></span>
+                <span id="dot-1" class="w-3.5 h-3.5 rounded-full border border-royalWhite/45 bg-royalWhite/5 transition-all duration-200"></span>
+                <span id="dot-2" class="w-3.5 h-3.5 rounded-full border border-royalWhite/45 bg-royalWhite/5 transition-all duration-200"></span>
+                <span id="dot-3" class="w-3.5 h-3.5 rounded-full border border-royalWhite/45 bg-royalWhite/5 transition-all duration-200"></span>
+            </div>
+
+            <p id="pinErrorMsg" class="text-xs text-royalPink h-4 mb-2 opacity-0 transition-opacity duration-200 font-medium">Incorrect passcode — tap 2026</p>
+
+            <!-- Numeric Keypad -->
+            <div class="grid grid-cols-3 gap-2.5 max-w-[270px] mx-auto">
+                <button type="button" onclick="handleDigit('1')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">1</button>
+                <button type="button" onclick="handleDigit('2')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">2</button>
+                <button type="button" onclick="handleDigit('3')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">3</button>
+                <button type="button" onclick="handleDigit('4')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">4</button>
+                <button type="button" onclick="handleDigit('5')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">5</button>
+                <button type="button" onclick="handleDigit('6')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">6</button>
+                <button type="button" onclick="handleDigit('7')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">7</button>
+                <button type="button" onclick="handleDigit('8')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">8</button>
+                <button type="button" onclick="handleDigit('9')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">9</button>
+                <button type="button" onclick="clearPin()" class="keypad-btn py-3.5 rounded-2xl text-xs uppercase tracking-wider font-semibold text-royalWhite/80">Clear</button>
+                <button type="button" onclick="handleDigit('0')" class="keypad-btn py-3.5 rounded-2xl text-lg font-semibold text-royalWhite">0</button>
+                <button type="button" onclick="backspacePin()" aria-label="Backspace" class="keypad-btn py-3.5 rounded-2xl text-base text-royalWhite/80"><i class="fa-solid fa-delete-left"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         MAIN MULTI-PAGE EXPERIENCE (Revealed after entering 2026)
+    ========================================================== -->
+    <main id="mainExperience" class="opacity-0 pointer-events-none transition-opacity duration-1000 pb-40 sm:pb-32">
+        
+        <!-- Top Royal Header -->
+        <header class="sticky top-0 z-30 px-3 sm:px-4 pt-3 sm:pt-4">
+            <nav class="royal-glass max-w-5xl mx-auto rounded-2xl px-4 py-2.5 sm:px-5 sm:py-3 flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-royalPink animate-pulse shadow-[0_0_10px_#FF36A6]"></span>
+                    <span class="font-editorial text-xl sm:text-2xl font-bold tracking-wide text-royalWhite">Essie</span>
+                    <span class="hidden xs:inline-block text-[10px] uppercase tracking-widest px-2 py-0.5 rounded-full bg-royalPurple/40 border border-royalGold/40 text-royalGold">My Girlfriend</span>
+                </div>
+
+                <!-- Desktop Multi-Page Navigation Tabs -->
+                <div class="hidden md:flex items-center gap-1.5 text-xs font-medium">
+                    <button type="button" onclick="switchPage('home')" data-nav="home" class="nav-tab active-tab px-3.5 py-2 rounded-xl flex items-center gap-1.5">
+                        <i class="fa-solid fa-crown text-[11px]"></i> <span>1. Queen</span>
+                    </button>
+                    <button type="button" onclick="switchPage('letters')" data-nav="letters" class="nav-tab px-3.5 py-2 rounded-xl text-royalWhite/80 hover:text-royalWhite flex items-center gap-1.5">
+                        <i class="fa-solid fa-envelope-open-text text-[11px]"></i> <span>2. Love Letters</span>
+                    </button>
+                    <button type="button" onclick="switchPage('videos')" data-nav="videos" class="nav-tab px-3.5 py-2 rounded-xl text-royalWhite/80 hover:text-royalWhite flex items-center gap-1.5">
+                        <i class="fa-solid fa-film text-[11px]"></i> <span>3. Videos</span>
+                    </button>
+                    <button type="button" onclick="switchPage('gallery')" data-nav="gallery" class="nav-tab px-3.5 py-2 rounded-xl text-royalWhite/80 hover:text-royalWhite flex items-center gap-1.5">
+                        <i class="fa-solid fa-images text-[11px]"></i> <span>4. Gallery & Us</span>
+                    </button>
+                </div>
+
+                <span class="text-[10px] sm:text-[11px] tracking-widest uppercase text-royalGold font-semibold">AresX ♥ Essie</span>
+            </nav>
+        </header>
+
+        <!-- =========================================================
+             PAGE 1: HOME — MY GIRLFRIEND & APHRODITE TRIBUTE
+        ========================================================== -->
+        <section id="page-home" class="page-view active-page max-w-5xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
+            <div class="royal-glass rounded-3xl p-5 sm:p-10 lg:p-12">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-center relative z-10">
+                    
+                    <!-- Main Portrait of Essie in Royal Jeweled Frame -->
+                    <div class="lg:col-span-5 flex flex-col items-center">
+                        <div class="royal-photo-frame rounded-3xl w-full max-w-xs sm:max-w-sm">
+                            <div class="relative rounded-2xl overflow-hidden aspect-[3/4] bg-royalBg">
+                                <img 
+                                    src="WhatsApp Image 2026-11-15 at 1.46.21 PM (2).jpeg" 
+                                    alt="Essie — My Girlfriend" 
+                                    onerror="this.src='https://placehold.co/600x800/080515/FFD166?text=Essie'"
+                                    class="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
+                                >
+                                <div class="absolute inset-0 bg-gradient-to-tr from-royalBg/60 via-transparent to-royalPink/15 pointer-events-none"></div>
+                                <div class="absolute bottom-3 left-3 right-3 px-3.5 py-2 rounded-xl bg-royalBg/75 backdrop-blur-md border border-royalGold/40 flex items-center justify-between">
+                                    <span class="font-editorial italic text-lg text-royalWhite">Essie</span>
+                                    <span class="text-[10px] uppercase tracking-widest text-royalGold font-semibold">My Girlfriend</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subdued Cameo of Ethan Below Her Portrait (Subtle & Balanced) -->
+                        <div class="mt-5 w-full max-w-xs sm:max-w-sm royal-glass rounded-2xl p-3 flex items-center gap-3.5 border border-royalPurple/50">
+                            <div class="subtle-cameo-frame rounded-xl w-14 h-14 shrink-0 overflow-hidden">
+                                <img 
+                                    src="WhatsApp Image 2026-11-15 at 3.31.09 PM.jpeg" 
+                                    alt="Ethan Price (AresX)" 
+                                    onerror="this.src='https://placehold.co/200x200/080515/FFD166?text=Ethan'"
+                                    class="w-full h-full object-cover object-top rounded-lg opacity-90"
+                                >
+                            </div>
+                            <div class="min-w-0 text-left">
+                                <p class="text-[10px] uppercase tracking-widest text-royalPink font-semibold">Your Boyfriend</p>
+                                <p class="font-editorial text-lg font-bold text-royalWhite truncate">Ethan Price (AresX)</p>
+                                <p class="text-[11px] text-royalWhite/75 truncate">Happiest guy since you said yes ♥</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Typographically Designed Aphrodite & New Girlfriend Tribute -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-royalPurple/50 to-royalPink/40 border border-royalGold/45 text-royalGold text-xs uppercase tracking-[0.2em]">
+                            <i class="fa-solid fa-heart text-royalPink text-[11px]"></i>
+                            <span>Chapter One • Officially My Girlfriend</span>
+                        </div>
+
+                        <h2 class="font-editorial text-3xl sm:text-4xl lg:text-5xl font-bold text-royalWhite leading-tight text-royal-glow">
+                            The Day You Said Yes, My World Changed
+                        </h2>
+
+                        <p class="text-sm sm:text-base text-royalWhite/90 leading-relaxed">
+                            Essie, hearing you accept to be my girlfriend is the sweetest victory of my life. Before anything else, I want you to read what my heart sees every single time I look at you:
+                        </p>
+
+                        <div class="relative pl-4 sm:pl-6 border-l-2 border-royalPink/80 space-y-4 bg-royalBg/35 p-4 rounded-r-2xl">
+                            <p class="font-editorial text-lg sm:text-2xl text-royalWhite leading-relaxed italic">
+                                “They say Aphrodite was the most beautiful woman the gods have ever seen, I believe they simply lives to early to meet you, for if the goddess of beauty herself stood before me crowns in gold while you stood beside her wearing nothing but that quiet smile, forgive me my lady but Olympias would lose my attention. Let poets phrase Aphrodite, let kings carver her face into marble, let entire kingdoms kneel and call her divine. I would still search every crowded hall for you.”
+                            </p>
+                            <p class="font-editorial text-lg sm:text-2xl text-royalWhite leading-relaxed italic">
+                                “Because Aphrodite may have taught the ancient world what beauty was, but had those poets seen your eyes, heard your laugh or watched the way make an ordinary moment feel sacred. They would have put down their pens. For beauty may have once belonged to the gods.”
+                            </p>
+                        </div>
+
+                        <!-- Next Page CTA Button -->
+                        <div class="pt-3 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-royalWhite/15">
+                            <div>
+                                <p class="text-xs uppercase tracking-widest text-royalGold/80">With all my heart</p>
+                                <p class="font-editorial text-2xl font-semibold text-royalGold">Forever yours, Ethan Price (AresX)</p>
+                            </div>
+                            <button type="button" onclick="switchPage('letters')" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-royalPurple via-royalPink to-royalSapphire text-royalWhite font-semibold text-xs uppercase tracking-widest shadow-lg hover:brightness-110 transition-all flex items-center justify-center gap-2">
+                                <span>Read More Messages</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             PAGE 2: MORE LOVE LETTERS & PROMISES TO ESSIE
+        ========================================================== -->
+        <section id="page-letters" class="page-view max-w-5xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
+            <div class="text-center max-w-2xl mx-auto mb-7">
+                <p class="text-xs uppercase tracking-[0.25em] text-royalGold font-semibold">Page II • From My Heart to Yours</p>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-royalWhite mt-1 text-royal-glow">Letters For My Girlfriend</h2>
+                <p class="text-xs sm:text-sm text-royalWhite/85 mt-2">Because one message could never hold everything I feel for you, Essie.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Letter 1 -->
+                <article class="royal-glass rounded-3xl p-6 sm:p-7 space-y-3 border-t-2 border-t-royalPink">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-widest text-royalPink font-semibold"><i class="fa-solid fa-sparkles mr-1"></i> Letter I</span>
+                        <span class="text-[11px] text-royalGold font-mono">01 / 04</span>
+                    </div>
+                    <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-royalWhite">Thank You For Choosing Me</h3>
+                    <p class="text-sm sm:text-base text-royalWhite/90 leading-relaxed">
+                        The moment you accepted to be my girlfriend, every ordinary hour turned into something magical. You didn’t just say yes to a title—you gave me the privilege of loving, protecting, and cherishing the most extraordinary girl I have ever known. I promise to make you proud of that “yes” every single day.
+                    </p>
+                </article>
+
+                <!-- Letter 2 -->
+                <article class="royal-glass rounded-3xl p-6 sm:p-7 space-y-3 border-t-2 border-t-royalSapphire">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-widest text-royalSapphire font-semibold"><i class="fa-solid fa-moon mr-1"></i> Letter II</span>
+                        <span class="text-[11px] text-royalGold font-mono">02 / 04</span>
+                    </div>
+                    <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-royalWhite">No Distance Can Dim Us</h3>
+                    <p class="text-sm sm:text-base text-royalWhite/90 leading-relaxed">
+                        Even when miles stand between where you are and where I am, you are the first thought on my mind when I wake up and the last prayer on my lips before I sleep. Whenever you miss me, open this page—let my voice, these songs, and these words remind you that my heart is right beside yours.
+                    </p>
+                </article>
+
+                <!-- Letter 3 -->
+                <article class="royal-glass rounded-3xl p-6 sm:p-7 space-y-3 border-t-2 border-t-royalPurple">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-widest text-purple-300 font-semibold"><i class="fa-solid fa-gem mr-1"></i> Letter III</span>
+                        <span class="text-[11px] text-royalGold font-mono">03 / 04</span>
+                    </div>
+                    <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-royalWhite">What I Adore About You</h3>
+                    <p class="text-sm sm:text-base text-royalWhite/90 leading-relaxed">
+                        I adore the effortless grace in your eyes, the warmth in your smile, and the gentle calm you bring into my world. You don’t even have to try to be unforgettable, Essie—just being yourself makes you a masterpiece that no artist could ever recreate.
+                    </p>
+                </article>
+
+                <!-- Letter 4 -->
+                <article class="royal-glass rounded-3xl p-6 sm:p-7 space-y-3 border-t-2 border-t-royalGold">
+                    <div class="flex items-center justify-between">
+                        <span class="text-xs uppercase tracking-widest text-royalGold font-semibold"><i class="fa-solid fa-crown mr-1"></i> Letter IV</span>
+                        <span class="text-[11px] text-royalGold font-mono">04 / 04</span>
+                    </div>
+                    <h3 class="font-editorial text-2xl sm:text-3xl font-bold text-royalWhite">My Promise To You</h3>
+                    <p class="text-sm sm:text-base text-royalWhite/90 leading-relaxed">
+                        I promise to listen when you need to talk, to hype you up when you chase your dreams, to respect your heart, and to never take a single second with you for granted. This is only the beginning of our story, my queen, and I cannot wait for every chapter ahead.
+                    </p>
+                </article>
+            </div>
+
+            <!-- Page Navigation Footer -->
+            <div class="mt-8 flex items-center justify-between gap-4">
+                <button type="button" onclick="switchPage('home')" class="px-4 py-2.5 rounded-2xl royal-glass text-xs uppercase tracking-widest text-royalWhite hover:text-royalGold flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Back to Queen</span>
+                </button>
+                <button type="button" onclick="switchPage('videos')" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-royalPurple via-royalPink to-royalSapphire text-royalWhite font-semibold text-xs uppercase tracking-widest shadow-lg flex items-center gap-2">
+                    <span>Watch Video Messages</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             PAGE 3: INTERACTIVE VIDEO MESSAGES
+        ========================================================== -->
+        <section id="page-videos" class="page-view max-w-5xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10">
+            <div class="text-center max-w-2xl mx-auto mb-7">
+                <p class="text-xs uppercase tracking-[0.25em] text-royalGold font-semibold">Page III • Tap to Watch & Listen</p>
+                <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-royalWhite mt-1 text-royal-glow">Videos Meant Only For You</h2>
+                <p class="text-xs sm:text-sm text-royalWhite/85 mt-2">Tap either video below on your phone. The background playlist will pause automatically while you watch.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                <!-- Video Message 1 -->
+                <div class="royal-glass rounded-3xl p-5 sm:p-6 flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs uppercase tracking-widest text-royalPink font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-film"></i> Message I
+                            </span>
+                            <span class="text-[11px] text-royalGold">Tap Video to Play</span>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-royalGold/35 bg-black shadow-2xl aspect-video relative">
+                            <video 
+                                id="videoMsg1"
+                                class="w-full h-full object-contain bg-black cursor-pointer"
+                                controls
+                                playsinline
+                                preload="metadata"
+                            >
+                                <source src="WhatsApp Video 2026-11-15 at 1.48.44 PM.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-semibold text-royalWhite mt-4">“Until I Saw You”</h3>
+                        <p class="text-xs sm:text-sm text-royalWhite/85 mt-1 leading-relaxed">
+                            Every beautiful thing in this world became a distant memory the moment you entered my life, Essie.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Video Message 2 -->
+                <div class="royal-glass rounded-3xl p-5 sm:p-6 flex flex-col justify-between">
+                    <div class="relative z-10">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs uppercase tracking-widest text-royalSapphire font-semibold flex items-center gap-2">
+                                <i class="fa-solid fa-film"></i> Message II
+                            </span>
+                            <span class="text-[11px] text-royalGold">Tap Video to Play</span>
+                        </div>
+                        <div class="rounded-2xl overflow-hidden border border-royalGold/35 bg-black shadow-2xl aspect-video relative">
+                            <video 
+                                id="videoMsg2"
+                                class="w-full h-full object-contain bg-black cursor-pointer"
+                                controls
+                                playsinline
+                                preload="metadata"
+                            >
+                                <source src="WhatsApp Video 2026-11-15 at 1.48.39 PM.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <h3 class="font-editorial text-2xl font-semibold text-royalWhite mt-4">“A Thousand Choices”</h3>
+                        <p class="text-xs sm:text-sm text-royalWhite/85 mt-1 leading-relaxed">
+                            Give me a thousand choices across a thousand lifetimes, and my heart will still choose you as my girlfriend every single time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Navigation Footer -->
+            <div class="mt-8 flex items-center justify-between gap-4">
+                <button type="button" onclick="switchPage('letters')" class="px-4 py-2.5 rounded-2xl royal-glass text-xs uppercase tracking-widest text-royalWhite hover:text-royalGold flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Love Letters</span>
+                </button>
+                <button type="button" onclick="switchPage('gallery')" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-royalPurple via-royalPink to-royalSapphire text-royalWhite font-semibold text-xs uppercase tracking-widest shadow-lg flex items-center gap-2">
+                    <span>Open Gallery & Us</span> <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             PAGE 4: ROYAL GALLERY & SUBTLE CAMEO OF ETHAN
+        ========================================================== -->
+        <section id="page-gallery" class="page-view max-w-5xl mx-auto px-3 sm:px-4 pt-6 sm:pt-10 space-y-8">
+            <!-- Main Spotlight Gallery: Essie -->
+            <div class="royal-glass rounded-3xl p-5 sm:p-10">
+                <div class="text-center max-w-xl mx-auto mb-7 relative z-10">
+                    <p class="text-xs uppercase tracking-[0.25em] text-royalGold font-semibold">Page IV • The Star of My World</p>
+                    <h2 class="font-editorial text-3xl sm:text-5xl font-bold text-royalWhite mt-1 text-royal-glow">Reflections of Essie</h2>
+                    <p class="text-xs sm:text-sm text-royalWhite/85 mt-1.5">Tap any photo to view it full-screen—or set it as the live website background.</p>
+                </div>
+
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 relative z-10">
+                    <!-- Essie Photo 1 -->
+                    <div class="space-y-2">
+                        <button type="button" onclick="openLightbox('WhatsApp Image 2026-11-15 at 1.46.21 PM (2).jpeg', 'Quiet Grace — Essie')" class="royal-photo-frame rounded-2xl w-full text-left group focus:outline-none">
+                            <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-royalBg">
+                                <img src="WhatsApp Image 2026-11-15 at 1.46.21 PM (2).jpeg" alt="Essie Portrait 1" onerror="this.src='https://placehold.co/450x600/080515/FFD166?text=Essie+1'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-royalBg/80 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-2.5 left-2.5 font-editorial italic text-royalWhite text-sm sm:text-base">Quiet Grace</span>
+                            </div>
+                        </button>
+                        <button type="button" onclick="setHeroBackground('WhatsApp Image 2026-11-15 at 1.46.21 PM (2).jpeg')" class="w-full py-1.5 rounded-xl bg-royalPurple/35 hover:bg-royalPink/40 border border-royalGold/30 text-[10px] uppercase tracking-wider text-royalGold transition-colors">
+                            Use as Backdrop
+                        </button>
+                    </div>
+
+                    <!-- Essie Photo 2 -->
+                    <div class="space-y-2">
+                        <button type="button" onclick="openLightbox('WhatsApp Image 2026-11-15 at 1.46.18 PM (2).jpeg', 'Effortless Poise — Essie')" class="royal-photo-frame rounded-2xl w-full text-left group focus:outline-none">
+                            <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-royalBg">
+                                <img src="WhatsApp Image 2026-11-15 at 1.46.18 PM (2).jpeg" alt="Essie Portrait 2" onerror="this.src='https://placehold.co/450x600/080515/FFD166?text=Essie+2'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-royalBg/80 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-2.5 left-2.5 font-editorial italic text-royalWhite text-sm sm:text-base">Effortless Poise</span>
+                            </div>
+                        </button>
+                        <button type="button" onclick="setHeroBackground('WhatsApp Image 2026-11-15 at 1.46.18 PM (2).jpeg')" class="w-full py-1.5 rounded-xl bg-royalPurple/35 hover:bg-royalPink/40 border border-royalGold/30 text-[10px] uppercase tracking-wider text-royalGold transition-colors">
+                            Use as Backdrop
+                        </button>
+                    </div>
+
+                    <!-- Essie Photo 3 -->
+                    <div class="space-y-2">
+                        <button type="button" onclick="openLightbox('WhatsApp Image 2026-11-15 at 1.46.18 PM (1).jpeg', 'Timeless Beauty — Essie')" class="royal-photo-frame rounded-2xl w-full text-left group focus:outline-none">
+                            <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-royalBg">
+                                <img src="WhatsApp Image 2026-11-15 at 1.46.18 PM (1).jpeg" alt="Essie Portrait 3" onerror="this.src='https://placehold.co/450x600/080515/FFD166?text=Essie+3'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-royalBg/80 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-2.5 left-2.5 font-editorial italic text-royalWhite text-sm sm:text-base">Timeless Beauty</span>
+                            </div>
+                        </button>
+                        <button type="button" onclick="setHeroBackground('WhatsApp Image 2026-11-15 at 1.46.18 PM (1).jpeg')" class="w-full py-1.5 rounded-xl bg-royalPurple/35 hover:bg-royalPink/40 border border-royalGold/30 text-[10px] uppercase tracking-wider text-royalGold transition-colors">
+                            Use as Backdrop
+                        </button>
+                    </div>
+
+                    <!-- Essie Photo 4 -->
+                    <div class="space-y-2">
+                        <button type="button" onclick="openLightbox('WhatsApp Image 2026-11-15 at 1.46.18 PM.jpeg', 'Radiant Smile — Essie')" class="royal-photo-frame rounded-2xl w-full text-left group focus:outline-none">
+                            <div class="relative rounded-xl overflow-hidden aspect-[3/4] bg-royalBg">
+                                <img src="WhatsApp Image 2026-11-15 at 1.46.18 PM.jpeg" alt="Essie Portrait 4" onerror="this.src='https://placehold.co/450x600/080515/FFD166?text=Essie+4'" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                <div class="absolute inset-0 bg-gradient-to-t from-royalBg/80 via-transparent to-transparent"></div>
+                                <span class="absolute bottom-2.5 left-2.5 font-editorial italic text-royalWhite text-sm sm:text-base">Radiant Smile</span>
+                            </div>
+                        </button>
+                        <button type="button" onclick="setHeroBackground('WhatsApp Image 2026-11-15 at 1.46.18 PM.jpeg')" class="w-full py-1.5 rounded-xl bg-royalPurple/35 hover:bg-royalPink/40 border border-royalGold/30 text-[10px] uppercase tracking-wider text-royalGold transition-colors">
+                            Use as Backdrop
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtle Cameo Section for Ethan (Smaller, Understated Cards so Essie remains the main centerpiece) -->
+            <div class="royal-glass rounded-3xl p-5 sm:p-7 max-w-2xl mx-auto">
+                <div class="flex flex-col sm:flex-row items-center gap-5 relative z-10">
+                    <div class="flex items-center gap-3 shrink-0">
+                        <button type="button" onclick="openLightbox('WhatsApp Image 2026-11-15 at 3.31.09 PM.jpeg', 'Ethan Price (AresX) — Always Yours')" class="subtle-cameo-frame rounded-2xl w-20 h-24 sm:w-24 sm:h-28 overflow-hidden focus:outline-none">
+                            <img src="WhatsApp Image 2026-11-15 at 3.31.09 PM.jpeg" alt="Ethan Price 1" onerror="this.src='https://placehold.co/240x280/080515/FFD166?text=Ethan+1'" class="w-full h-full object-cover object-top rounded-xl opacity-90 hover:opacity-100 transition-opacity">
+                        </button>
+                        <button type="button" onclick="openLightbox('WhatsApp Image 2026-11-15 at 3.31.10 PM.jpeg', 'Ethan Price — Thinking of Essie')" class="subtle-cameo-frame rounded-2xl w-20 h-24 sm:w-24 sm:h-28 overflow-hidden focus:outline-none">
+                            <img src="WhatsApp Image 2026-11-15 at 3.31.10 PM.jpeg" alt="Ethan Price 2" onerror="this.src='https://placehold.co/240x280/080515/FFD166?text=Ethan+2'" class="w-full h-full object-cover rounded-xl opacity-90 hover:opacity-100 transition-opacity">
+                        </button>
+                    </div>
+                    <div class="text-center sm:text-left space-y-1.5">
+                        <span class="text-[10px] uppercase tracking-[0.22em] text-royalSapphire font-semibold">Beside My Queen</span>
+                        <h3 class="font-editorial text-2xl font-bold text-royalWhite">Yours Truly, Ethan Price (AresX)</h3>
+                        <p class="text-xs sm:text-sm text-royalWhite/80 leading-relaxed">
+                            Just a quiet corner of your royal sanctuary so whenever you miss me, you can see the guy whose heart belongs completely to you.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Page Navigation Footer -->
+            <div class="flex items-center justify-between gap-4">
+                <button type="button" onclick="switchPage('videos')" class="px-4 py-2.5 rounded-2xl royal-glass text-xs uppercase tracking-widest text-royalWhite hover:text-royalGold flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i> <span>Videos</span>
+                </button>
+                <button type="button" onclick="switchPage('home')" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-royalPurple via-royalPink to-royalSapphire text-royalWhite font-semibold text-xs uppercase tracking-widest shadow-lg flex items-center gap-2">
+                    <i class="fa-solid fa-crown"></i> <span>Back to Beginning</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Footer Dedication -->
+        <footer class="max-w-5xl mx-auto px-4 pt-10 text-center">
+            <p class="font-editorial italic text-base sm:text-lg text-royalWhite/80">
+                Crafted in Royal Fantasy Romance by <span class="text-royalGold font-semibold">Ethan Price (AresX)</span> — For My Girlfriend <span class="text-royalPink font-semibold">Essie</span>.
+            </p>
+        </footer>
+    </main>
+
+    <!-- =========================================================
+         MOBILE BOTTOM NAVIGATION BAR (Easy Thumb Navigation on Phone)
+    ========================================================== -->
+    <div id="mobileBottomNav" class="md:hidden fixed bottom-0 inset-x-0 z-40 translate-y-full opacity-0 transition-all duration-700 bg-royalBg/95 backdrop-blur-xl border-t border-royalGold/30 px-2 py-2">
+        <div class="grid grid-cols-4 gap-1 max-w-md mx-auto">
+            <button type="button" onclick="switchPage('home')" data-nav="home" class="nav-tab active-tab py-2 rounded-xl flex flex-col items-center justify-center gap-1 text-[10px] font-semibold">
+                <i class="fa-solid fa-crown text-sm"></i>
+                <span>Queen</span>
+            </button>
+            <button type="button" onclick="switchPage('letters')" data-nav="letters" class="nav-tab py-2 rounded-xl flex flex-col items-center justify-center gap-1 text-[10px] font-semibold text-royalWhite/75">
+                <i class="fa-solid fa-envelope-open-text text-sm"></i>
+                <span>Letters</span>
+            </button>
+            <button type="button" onclick="switchPage('videos')" data-nav="videos" class="nav-tab py-2 rounded-xl flex flex-col items-center justify-center gap-1 text-[10px] font-semibold text-royalWhite/75">
+                <i class="fa-solid fa-film text-sm"></i>
+                <span>Videos</span>
+            </button>
+            <button type="button" onclick="switchPage('gallery')" data-nav="gallery" class="nav-tab py-2 rounded-xl flex flex-col items-center justify-center gap-1 text-[10px] font-semibold text-royalWhite/75">
+                <i class="fa-solid fa-images text-sm"></i>
+                <span>Gallery</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         5. FLOATING ROYAL MUSIC PLAYER WIDGET (Songs 1 -> 2 -> 3 -> 4)
+    ========================================================== -->
+    <div id="musicWidget" class="fixed bottom-16 md:bottom-4 right-3 left-3 sm:left-auto sm:w-96 z-40 translate-y-36 opacity-0 transition-all duration-700">
+        <div class="royal-glass rounded-2xl p-3 flex items-center justify-between gap-3 shadow-2xl border border-royalPink/45">
+            <!-- Equalizer + Track Info -->
+            <div class="flex items-center gap-2.5 min-w-0 relative z-10">
+                <div id="eqVisualizer" class="w-9 h-9 rounded-xl bg-gradient-to-br from-royalPurple/60 to-royalPink/40 border border-royalGold/50 flex items-end justify-center gap-1 p-2 shrink-0">
+                    <span class="eq-bar h-2"></span>
+                    <span class="eq-bar h-3.5"></span>
+                    <span class="eq-bar h-2.5"></span>
+                    <span class="eq-bar h-1.5"></span>
+                </div>
+                <div class="min-w-0">
+                    <p id="trackCounter" class="text-[9px] uppercase tracking-widest text-royalGold font-semibold">Track 1 of 4 • Playing</p>
+                    <p id="trackTitle" class="text-xs sm:text-sm font-semibold text-royalWhite truncate">Remedy</p>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="flex items-center gap-1.5 shrink-0 relative z-10">
+                <button type="button" onclick="prevTrack()" aria-label="Previous Song" class="w-8 h-8 rounded-xl bg-royalPurple/40 hover:bg-royalPink/40 border border-royalWhite/20 flex items-center justify-center text-royalWhite transition-colors">
+                    <i class="fa-solid fa-backward-step text-xs"></i>
+                </button>
+                <button type="button" onclick="togglePlayPause()" aria-label="Play or Pause" class="w-9 h-9 rounded-xl bg-gradient-to-r from-royalPink to-royalPurple border border-royalGold/70 flex items-center justify-center text-royalGold shadow-md transition-transform active:scale-95">
+                    <i id="playPauseIcon" class="fa-solid fa-play text-xs"></i>
+                </button>
+                <button type="button" onclick="nextTrack()" aria-label="Next Song" class="w-8 h-8 rounded-xl bg-royalPurple/40 hover:bg-royalPink/40 border border-royalWhite/20 flex items-center justify-center text-royalWhite transition-colors">
+                    <i class="fa-solid fa-forward-step text-xs"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================
+         LIGHTBOX MODAL FOR FULL-SCREEN PORTRAITS
+    ========================================================== -->
+    <div id="photoLightbox" onclick="closeLightbox()" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-royalBg/92 backdrop-blur-xl">
+        <div onclick="event.stopPropagation()" class="royal-glass max-w-2xl w-full rounded-3xl p-4 sm:p-5 relative">
+            <button type="button" onclick="closeLightbox()" aria-label="Close Preview" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-royalBg/80 hover:bg-royalPink/40 border border-royalGold/40 text-royalWhite flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="rounded-2xl overflow-hidden bg-royalBg max-h-[75vh] flex items-center justify-center">
+                <img id="lightboxImg" src="" alt="Full View" class="max-h-[73vh] w-auto object-contain">
+            </div>
+            <p id="lightboxCaption" class="font-editorial italic text-center text-xl text-royalGold mt-3"></p>
+        </div>
+    </div>
+
+    <!-- Hidden Audio Element for Sequential Playlist -->
+    <audio id="bgAudioPlayer" preload="auto" playsinline></audio>
+
+    <!-- =========================================================
+         JAVASCRIPT LOGIC (Passcode, Multi-Page Router, Sequential Playlist, Video Sync)
+    ========================================================== -->
+    <script>
+        // 1. Sequential 4-Song Playlist Configuration (Exact Filenames)
+        const playlist = [
+            { title: "Remedy", file: "Song 1(Remedy).mp3" },
+            { title: "REMORSE", file: "Song 2(REMORSE).mp3" },
+            { title: "Happy Face", file: "Song 3(Happy Face).mp3" },
+            { title: "Floating", file: "Song 4(Floating).mp3" }
+        ];
+
+        let currentTrackIndex = 0;
+        let isUnlocked = false;
+        let wasMusicPlayingBeforeVideo = false;
+
+        const audioPlayer = document.getElementById('bgAudioPlayer');
+        const trackTitleEl = document.getElementById('trackTitle');
+        const trackCounterEl = document.getElementById('trackCounter');
+        const playPauseIcon = document.getElementById('playPauseIcon');
+        const eqVisualizer = document.getElementById('eqVisualizer');
+
+        function loadTrack(index, autoPlay = true) {
+            currentTrackIndex = (index + playlist.length) % playlist.length;
+            const track = playlist[currentTrackIndex];
+            audioPlayer.src = track.file;
+            trackTitleEl.textContent = track.title;
+            trackCounterEl.textContent = `Track ${currentTrackIndex + 1} of ${playlist.length}`;
+
+            if (autoPlay) {
+                audioPlayer.play().then(() => {
+                    updatePlayerUI(true);
+                }).catch(err => {
+                    console.warn("Playback waiting for user tap:", err);
+                    updatePlayerUI(false);
+                });
+            } else {
+                updatePlayerUI(false);
+            }
+        }
+
+        function updatePlayerUI(isPlaying) {
+            if (isPlaying) {
+                playPauseIcon.className = "fa-solid fa-pause text-xs";
+                eqVisualizer.classList.add("eq-playing");
+                trackCounterEl.textContent = `Track ${currentTrackIndex + 1} of ${playlist.length} • Playing`;
+            } else {
+                playPauseIcon.className = "fa-solid fa-play text-xs";
+                eqVisualizer.classList.remove("eq-playing");
+                trackCounterEl.textContent = `Track ${currentTrackIndex + 1} of ${playlist.length} • Paused`;
+            }
+        }
+
+        function togglePlayPause() {
+            if (audioPlayer.paused) {
+                video1.pause();
+                video2.pause();
+                audioPlayer.play().then(() => updatePlayerUI(true));
+            } else {
+                audioPlayer.pause();
+                updatePlayerUI(false);
+            }
+        }
+
+        function nextTrack() {
+            loadTrack(currentTrackIndex + 1, true);
+        }
+
+        function prevTrack() {
+            loadTrack(currentTrackIndex - 1, true);
+        }
+
+        // Automatically play next song in order (1 -> 2 -> 3 -> 4 -> loop)
+        audioPlayer.addEventListener('ended', () => {
+            loadTrack(currentTrackIndex + 1, true);
+        });
+
+        // 2. Multi-Page View Switcher
+        function switchPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page-view').forEach(section => {
+                section.classList.remove('active-page');
+            });
+
+            // Show target page
+            const targetSection = document.getElementById(`page-${pageName}`);
+            if (targetSection) {
+                targetSection.classList.add('active-page');
+            }
+
+            // Update active state on both desktop & mobile nav buttons
+            document.querySelectorAll('[data-nav]').forEach(btn => {
+                if (btn.getAttribute('data-nav') === pageName) {
+                    btn.classList.add('active-tab');
+                    btn.classList.remove('text-royalWhite/80', 'text-royalWhite/75');
+                } else {
+                    btn.classList.remove('active-tab');
+                    btn.classList.add('text-royalWhite/80');
+                }
+            });
+
+            // Smooth scroll to top on mobile/desktop page change
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // 3. Passcode Gate ('2026') Logic
+        const CORRECT_PIN = "2026";
+        let enteredPin = "";
+
+        function updatePinDots() {
+            for (let i = 0; i < 4; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if (i < enteredPin.length) {
+                    dot.classList.remove('bg-royalWhite/5', 'border-royalWhite/45');
+                    dot.classList.add('bg-royalGold', 'border-royalGold', 'scale-125', 'shadow-[0_0_14px_#FF36A6]');
+                } else {
+                    dot.classList.add('bg-royalWhite/5', 'border-royalWhite/45');
+                    dot.classList.remove('bg-royalGold', 'border-royalGold', 'scale-125', 'shadow-[0_0_14px_#FF36A6]');
+                }
+            }
+        }
+
+        function handleDigit(digit) {
+            if (isUnlocked || enteredPin.length >= 4) return;
+            enteredPin += digit;
+            document.getElementById('pinErrorMsg').style.opacity = '0';
+            updatePinDots();
+
+            if (enteredPin.length === 4) {
+                if (enteredPin === CORRECT_PIN) {
+                    unlockSanctuary();
+                } else {
+                    const gateCard = document.getElementById('gateCard');
+                    const errMsg = document.getElementById('pinErrorMsg');
+                    gateCard.classList.add('animate-shake');
+                    errMsg.style.opacity = '1';
+                    setTimeout(() => {
+                        gateCard.classList.remove('animate-shake');
+                        enteredPin = "";
+                        updatePinDots();
+                    }, 500);
+                }
+            }
+        }
+
+        function clearPin() {
+            if (isUnlocked) return;
+            enteredPin = "";
+            document.getElementById('pinErrorMsg').style.opacity = '0';
+            updatePinDots();
+        }
+
+        function backspacePin() {
+            if (isUnlocked || enteredPin.length === 0) return;
+            enteredPin = enteredPin.slice(0, -1);
+            document.getElementById('pinErrorMsg').style.opacity = '0';
+            updatePinDots();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (!isUnlocked) {
+                if (e.key >= '0' && e.key <= '9') {
+                    handleDigit(e.key);
+                } else if (e.key === 'Backspace') {
+                    backspacePin();
+                } else if (e.key === 'Escape') {
+                    clearPin();
+                }
+            } else if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        function unlockSanctuary() {
+            isUnlocked = true;
+            const lockIcon = document.getElementById('lockIcon');
+            lockIcon.className = "fa-solid fa-heart text-royalPink text-2xl scale-125";
+
+            // Start Song 1 immediately on user tap gesture (works seamlessly on iOS/Android WhatsApp browsers)
+            loadTrack(0, true);
+
+            setTimeout(() => {
+                const gate = document.getElementById('passcodeGate');
+                const main = document.getElementById('mainExperience');
+                const widget = document.getElementById('musicWidget');
+                const mobileNav = document.getElementById('mobileBottomNav');
+
+                gate.classList.add('opacity-0', 'pointer-events-none');
+                main.classList.remove('opacity-0', 'pointer-events-none');
+                widget.classList.remove('translate-y-36', 'opacity-0');
+                mobileNav.classList.remove('translate-y-full', 'opacity-0');
+
+                setTimeout(() => {
+                    gate.style.display = 'none';
+                }, 750);
+            }, 300);
+        }
+
+        // 4. Smart Audio Coordination Between Background Playlist & Interactive Videos
+        const video1 = document.getElementById('videoMsg1');
+        const video2 = document.getElementById('videoMsg2');
+
+        function setupVideoAudioSync(activeVideo, otherVideo) {
+            activeVideo.addEventListener('play', () => {
+                if (!otherVideo.paused) {
+                    otherVideo.pause();
+                }
+                if (!audioPlayer.paused) {
+                    wasMusicPlayingBeforeVideo = true;
+                    audioPlayer.pause();
+                    updatePlayerUI(false);
+                }
+            });
+
+            const resumeMusicIfNeeded = () => {
+                if (wasMusicPlayingBeforeVideo && video1.paused && video2.paused) {
+                    wasMusicPlayingBeforeVideo = false;
+                    audioPlayer.play().then(() => updatePlayerUI(true)).catch(() => {});
+                }
+            };
+
+            activeVideo.addEventListener('pause', resumeMusicIfNeeded);
+            activeVideo.addEventListener('ended', resumeMusicIfNeeded);
+        }
+
+        setupVideoAudioSync(video1, video2);
+        setupVideoAudioSync(video2, video1);
+
+        // 5. Lightbox & Dynamic Background Switcher
+        function openLightbox(src, caption) {
+            const modal = document.getElementById('photoLightbox');
+            const img = document.getElementById('lightboxImg');
+            const cap = document.getElementById('lightboxCaption');
+
+            img.src = src;
+            cap.textContent = caption;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('photoLightbox');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function setHeroBackground(imageFile) {
+            const essieBg = document.getElementById('essieBg');
+            essieBg.style.backgroundImage = `url('${imageFile}')`;
+        }
+
+        // 6. Subtle Parallax Depth on Desktop Mouse Move
+        const essieBg = document.getElementById('essieBg');
+        document.addEventListener('mousemove', (e) => {
+            const moveX = (e.clientX / window.innerWidth - 0.5) * -12;
+            const moveY = (e.clientY / window.innerHeight - 0.5) * -12;
+            essieBg.style.transform = `translate3d(${moveX}px, ${moveY}px, 0) scale(1.04)`;
+        });
+    </script>
+</body>
+</html>
